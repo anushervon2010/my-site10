@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кабинет — Nexora</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <a href="index.html" class="brand">
+        <span class="brand-icon">N</span>
+        <span>Nexora</span>
+    </a>
+
+    <button id="logoutButton" class="button button-small">
+        Баромадан
+    </button>
+</header>
+
+<main class="content-page">
+    <p class="eyebrow">Кабинети корбар</p>
+    <h1>Хуш омадед!</h1>
+
+    <p id="userText">
+        Маълумоти корбар дар ин ҷо нишон дода мешавад.
+    </p>
+
+    <div class="hero-card" style="margin-top: 30px;">
+        <h2>Аккаунти шумо фаъол аст</h2>
+        <p>
+            Акнун шумо метавонед хизматрасониҳои Nexora-ро истифода баред.
+        </p>
+    </div>
+</main>
+
+<script type="module">
+    import { initializeApp } from
+        "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+
+    import {
+        getAuth,
+        onAuthStateChanged,
+        signOut
+    } from
+        "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+    const firebaseConfig = {
+        apiKey: "CONFIG-И ХУДАТ",
+        authDomain: "AUTH-DOMAIN-И ХУДАТ",
+        projectId: "PROJECT-ID-И ХУДАТ",
+        storageBucket: "STORAGE-BUCKET-И ХУДАТ",
+        messagingSenderId: "SENDER-ID-И ХУДАТ",
+        appId: "APP-ID-И ХУДАТ"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    onAuthStateChanged(auth, function(user) {
+        if (!user) {
+            window.location.href = "login.html";
+            return;
+        }
+
+        document.getElementById("userText").textContent =
+            `Шумо ҳамчун ${user.email} ворид шудед.`;
+    });
+
+    document
+        .getElementById("logoutButton")
+        .addEventListener("click", async function() {
+            await signOut(auth);
+            window.location.href = "login.html";
+        });
+</script>
+
+</body>
+</html>
