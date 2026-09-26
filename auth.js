@@ -35,3 +35,4 @@ document
             alert("Ҳангоми бақайдгирӣ хато пайдо шуд.");
         }
     });
+<script type="module" src="js/auth.js"></script>
