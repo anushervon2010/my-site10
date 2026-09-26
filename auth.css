@@ -1,0 +1,140 @@
+.auth-page {
+    min-height: calc(100vh - 82px);
+    padding: 60px 20px;
+    display: grid;
+    place-items: center;
+    background:
+        radial-gradient(circle at 15% 20%, #eeeaff 0, transparent 28%),
+        #fafaff;
+}
+
+.auth-box {
+    width: min(100%, 460px);
+    padding: 38px;
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    background: white;
+    box-shadow: 0 25px 70px rgba(46, 43, 95, .10);
+}
+
+.auth-heading {
+    text-align: center;
+}
+
+.auth-heading .brand-icon {
+    margin: 0 auto 20px;
+}
+
+.auth-heading h1 {
+    margin-bottom: 8px;
+    color: var(--dark);
+    font-size: 27px;
+}
+
+.auth-heading p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.auth-providers {
+    display: grid;
+    gap: 10px;
+    margin: 28px 0 20px;
+}
+
+.provider-button {
+    width: 100%;
+    padding: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    color: var(--text);
+    background: white;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.provider-button:hover {
+    background: #fafaff;
+    border-color: var(--primary);
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 22px 0;
+    color: #a2a8b8;
+    font-size: 11px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    height: 1px;
+    flex: 1;
+    background: var(--border);
+}
+
+.auth-box label:not(.agreement) {
+    display: block;
+    margin: 15px 0 7px;
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.auth-box input[type="text"],
+.auth-box input[type="email"],
+.auth-box input[type="password"] {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    outline: none;
+    font: inherit;
+    font-size: 13px;
+}
+
+.auth-box input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px #eeecff;
+}
+
+.agreement {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin: 20px 0;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.agreement input {
+    margin-top: 4px;
+}
+
+.agreement a,
+.auth-footer a {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.auth-submit {
+    width: 100%;
+    border: 0;
+    font-family: inherit;
+}
+
+.auth-footer {
+    margin-top: 22px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+}

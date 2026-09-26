@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="tg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бақайдгирӣ — Nexora</title>
+    <link rel="stylesheet" a href="css/style.css">
+    <link rel="stylesheet" a href="css/auth.css">
+</head>
+<body>
+
+<header class="site-header">
+    <a href="index.html" class="brand">
+        <span class="brand-icon">N</span>
+        <span>Nexora</span>
+    </a>
+
+    <a href="index.html" class="login-link">← Ба саҳифаи асосӣ</a>
+</header>
+
+<main class="auth-page">
+    <section class="auth-box">
+        <div class="auth-heading">
+            <div class="brand-icon">N</div>
+            <h1>Аккаунт созед</h1>
+            <p>Ба Nexora ҳамроҳ шудан ҳамагӣ якчанд сония мегирад.</p>
+        </div>
+
+        <div class="auth-providers">
+            <button class="provider-button" onclick="loginWithGoogle()">
+                <span class="google-logo">G</span>
+                Бо Google идома додан
+            </button>
+
+            <button class="provider-button" onclick="loginWithFacebook()">
+                <span class="facebook-logo">f</span>
+                Бо Facebook идома додан
+            </button>
+        </div>
+
+        <div class="divider">
+            <span>ё бо email</span>
+        </div>
+
+        <form id="registerForm">
+            <label for="name">Номи пурра</label>
+            <input id="name" type="text" placeholder="Масалан: Муҳаммад Алиев" required>
+
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="example@gmail.com" required>
+
+            <label for="password">Парол</label>
+            <input id="password" type="password" placeholder="Ҳадди ақал 8 аломат" required>
+
+            <label class="agreement">
+                <input type="checkbox" required>
+                <span>
+                    Ман бо <a href="terms.html">шартҳои истифода</a> ва
+                    <a href="privacy.html">сиёсати махфият</a> розӣ ҳастам.
+                </span>
+            </label>
+
+            <button type="submit" class="button button-primary auth-submit">
+                Сохтани аккаунт
+            </button>
+        </form>
+
+        <p class="auth-footer">
+            Аллакай аккаунт доред?
+            <a href="login.html">Ворид шавед</a>
+        </p>
+    </section>
+</main>
+
+<script src="js/auth.js"></script>
+</body>
+</html>
